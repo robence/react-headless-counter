@@ -4,7 +4,7 @@ import {
   CounterDecrement,
   CounterDisplay,
   CounterIncrement,
-} from './components/ui/Counter';
+} from './components/Counter';
 
 function App() {
   const [count, setCount] = useState(0);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../ui';
 
 type CounterDecrementType = {
   decrement: () => void;
@@ -9,7 +10,7 @@ export default function CounterDecrement(props: CounterDecrementType) {
 
   return (
     <div>
-      <button onClick={decrement}>-</button>
+      <Button onClick={decrement}>-</Button>
     </div>
   );
 }

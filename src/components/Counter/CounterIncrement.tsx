@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../ui';
 
 type CounterIncrementType = {
   increment: () => void;
@@ -9,7 +10,7 @@ export default function CounterIncrement(props: CounterIncrementType) {
 
   return (
     <div>
-      <button onClick={increment}>+</button>
+      <Button onClick={increment}>+</Button>
     </div>
   );
 }

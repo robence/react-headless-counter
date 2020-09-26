@@ -1,8 +1,8 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import './Button.css';
 
 type ButtonType = {
-  onClick: (event: MouseEvent) => void;
+  onClick: (event: React.MouseEvent) => void;
   className?: string;
   children: React.ReactNode;
 };

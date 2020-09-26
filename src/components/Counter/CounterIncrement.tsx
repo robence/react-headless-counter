@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../ui';
 
 type CounterIncrementType = {
-  increment: () => void;
+  increment: (event: React.MouseEvent) => void;
 };
 
 export default function CounterIncrement(props: CounterIncrementType) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../ui';
 
 type CounterDecrementType = {
-  decrement: () => void;
+  decrement: (event: React.MouseEvent) => void;
 };
 
 export default function CounterDecrement(props: CounterDecrementType) {

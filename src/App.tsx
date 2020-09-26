@@ -1,28 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import {
   CounterDecrement,
   CounterDisplay,
   CounterIncrement,
 } from './components/Counter';
+import CounterHeadless from './components/headless/CounterHeadless';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount((currValue) => currValue + 1);
-  };
-
-  const decrement = () => {
-    setCount((currValue) => currValue - 1);
-  };
-
   return (
     <div className="App">
       <header className="App-header">
-        <CounterDecrement decrement={decrement} />
-        <CounterDisplay count={count} />
-        <CounterIncrement increment={increment} />
+        <CounterHeadless>
+          {({ count, increment, decrement }) => (
+            <>
+              <CounterDecrement decrement={decrement} />
+              <CounterDisplay count={count} />
+              <CounterIncrement increment={increment} />
+            </>
+          )}
+        </CounterHeadless>
       </header>
     </div>
   );

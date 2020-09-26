@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function CounterDecrement() {
+type CounterDecrementType = {
+  decrement: () => void;
+};
+
+export default function CounterDecrement(props: CounterDecrementType) {
+  const { decrement } = props;
+
   return (
     <div>
-      <button>-</button>
+      <button onClick={decrement}>-</button>
     </div>
   );
 }

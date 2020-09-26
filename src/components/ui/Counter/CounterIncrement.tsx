@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function CounterIncrement() {
+type CounterIncrementType = {
+  increment: () => void;
+};
+
+export default function CounterIncrement(props: CounterIncrementType) {
+  const { increment } = props;
+
   return (
     <div>
-      <button>+</button>
+      <button onClick={increment}>+</button>
     </div>
   );
 }

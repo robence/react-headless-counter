@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function CounterDisplay() {
+type CounterDecrementType = {
+  count: number;
+};
+
+export default function CounterDisplay(props: CounterDecrementType) {
+  const { count } = props;
+
   return (
     <div>
-      <span>0</span>
+      <span>{count}</span>
     </div>
   );
 }
